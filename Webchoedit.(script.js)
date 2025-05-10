@@ -1,0 +1,23 @@
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("form-status").innerText = "✅ ขอบคุณ! เราจะติดต่อกลับภายใน 24 ชั่วโมง";
+  this.reset();
+});
+
+document.getElementById("chat-input").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    let chatBox = document.getElementById("chat-box");
+    let message = document.createElement("div");
+    message.classList.add("text-white");
+    message.innerText = `คุณ: ${this.value}`;
+    chatBox.appendChild(message);
+
+    let response = document.createElement("div");
+    response.classList.add("text-white");
+    response.innerText = "AI: สวัสดีครับ มีอะไรให้ช่วยมั้ย?";
+    chatBox.appendChild(response);
+
+    this.value = ""; // Clear input field
+    chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+  }
+});
