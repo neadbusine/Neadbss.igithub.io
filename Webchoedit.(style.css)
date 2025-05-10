@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#chat-box {
+  max-height: 300px;
+  overflow-y: scroll;
+  border-bottom: 2px solid #ccc;
+}
+
+#chat-input {
+  border-top: 2px solid #ccc;
+}
+
+#chat-box div {
+  margin-bottom: 10px;
+}
+
+#contact-form input, #contact-form textarea {
+  border: none;
+  outline: none;
+}
